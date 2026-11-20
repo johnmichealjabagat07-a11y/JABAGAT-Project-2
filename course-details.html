@@ -13,6 +13,12 @@
     .brand-mark { width: 48px; height: 48px; object-fit: contain; }
     .brand-name { color: var(--navy); font-size: .9rem; font-weight: 750; line-height: 1.15; max-width: 220px; }
     .nav-link { color: var(--navy); font-weight: 600; }
+    .academics-menu { min-width: 330px; background: #091e42; border: 0; border-radius: .35rem; padding: .4rem; box-shadow: 0 16px 36px rgba(3,18,45,.35); }
+    .academic-choice { display: flex; align-items: flex-start; gap: .9rem; color: #fff; padding: .7rem .85rem; border-radius: .25rem; }
+    .academic-choice strong { display: block; font-size: 1.05rem; line-height: 1.2; }
+    .academic-choice small { display: block; color: #8ea0bd; margin-top: .18rem; }
+    .academic-choice:hover, .academic-choice:focus { background: #12305e; color: #fff; }
+    .academic-icon { width: 38px; color: #8294b1; font-size: 1.45rem; line-height: 1; text-align: center; }
     .page-hero { background: linear-gradient(125deg, #082552, var(--blue)); color: #fff; }
     .eyebrow { color: var(--gold); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
     .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 800; }
@@ -29,7 +35,14 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavigation"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="courses.html">Courses</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
+          <ul class="dropdown-menu academics-menu">
+            <li><a class="dropdown-item academic-choice" href="courses.html#college-programs"><span class="academic-icon" aria-hidden="true">&#127891;</span><span><strong>College Programs</strong><small>Degree programs &amp; courses</small></span></a></li>
+            <li><a class="dropdown-item academic-choice" href="courses.html#senior-high-school"><span class="academic-icon" aria-hidden="true">&#128214;</span><span><strong>Senior High School</strong><small>Academic &amp; TVL tracks</small></span></a></li>
+            <li><a class="dropdown-item academic-choice" href="courses.html#basic-education"><span class="academic-icon" aria-hidden="true">&#127979;</span><span><strong>Basic Education</strong><small>Elementary &amp; Junior High</small></span></a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
         <li class="nav-item"><a class="nav-link" href="trainers.html">Faculty</a></li>
         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="course-details.html">Course details</a></li><li><a class="dropdown-item" href="pricing.html">Tuition and fees</a></li><li><a class="dropdown-item" href="starter-page.html">Welcome</a></li></ul></li>
