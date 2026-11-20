@@ -35,9 +35,14 @@
     .supplemental strong { color: #fff1a6; }
     .supplemental em { color: #dfe8f5; display: block; font-size: 1.1rem; }
     .track-section { margin-top: 2.5rem; }
-    .track-section .offerings { margin-top: 0; }
-    .track-section h3 { color: #fff1a6; font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 800; margin: 1rem 0 .25rem; }
-    .track-section h3:first-of-type { margin-top: 0; }
+    .track-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+    .track-card { background: #fff; border: 1px solid #dde5ef; border-left: 5px solid var(--gold); border-radius: 1rem; box-shadow: 0 12px 28px rgba(9,43,92,.08); padding: 1.35rem 1.5rem; }
+    .track-card h3 { color: var(--navy); font-size: 1.15rem; font-weight: 800; margin-bottom: .85rem; }
+    .strand-list { margin: 0; padding-left: 1.25rem; }
+    .strand-list li { color: var(--ink); margin: .42rem 0; }
+    .track-card.full-width { grid-column: 1 / -1; }
+    .track-card.full-width .strand-list { list-style: none; padding-left: 0; }
+    @media (max-width: 767.98px) { .track-grid { grid-template-columns: 1fr; } .track-card.full-width { grid-column: auto; } }
     footer { background: #061d40; color: rgba(255,255,255,.78); }
   </style>
 </head>
@@ -97,28 +102,35 @@
         <p class="supplemental mb-0"><strong>Supplemental Program</strong> for Non-Education Bachelor's Degree Graduates<br><em>18 Units Professional Education</em></p>
       </div>
       <section id="senior-high-school" class="track-section" aria-labelledby="senior-high-heading">
-        <div class="offerings">
+        <div class="text-center mb-4">
           <div class="eyebrow mb-2">Secondary Education</div>
-          <h2 id="senior-high-heading" class="mb-4">Senior High School Tracks and Strands</h2>
-
-          <h3>Academic Track</h3>
-          <ul class="program-list">
-            <li>Accountancy, Business, and Management (ABM)</li>
-            <li>Science, Technology, Engineering, and Mathematics (STEM)</li>
-            <li>Humanities and Social Sciences (HUMSS)</li>
-            <li>General Academic Strand (GAS)</li>
-          </ul>
-
-          <h3>Technical-Vocational-Livelihood (TVL) Track</h3>
-          <ul class="program-list">
-            <li>Information and Communications Technology (ICT)</li>
-            <li>Home Economics</li>
-            <li>Industrial Arts</li>
-            <li>Agri-Fishery Arts</li>
-          </ul>
-
-          <h3>Sports Track</h3>
-          <h3>Arts and Design Track</h3>
+          <h2 id="senior-high-heading" class="section-title">Senior High School Tracks and Strands</h2>
+        </div>
+        <div class="track-grid">
+          <article class="track-card">
+            <h3>Academic Track</h3>
+            <ul class="strand-list">
+              <li>Accountancy, Business, and Management (ABM)</li>
+              <li>Science, Technology, Engineering, and Mathematics (STEM)</li>
+              <li>Humanities and Social Sciences (HUMSS)</li>
+              <li>General Academic Strand (GAS)</li>
+            </ul>
+          </article>
+          <article class="track-card">
+            <h3>Technical-Vocational-Livelihood (TVL) Track</h3>
+            <ul class="strand-list">
+              <li>Information and Communications Technology (ICT)</li>
+              <li>Home Economics</li>
+              <li>Industrial Arts</li>
+              <li>Agri-Fishery Arts</li>
+            </ul>
+          </article>
+          <article class="track-card full-width">
+            <h3>Sports Track</h3>
+          </article>
+          <article class="track-card full-width">
+            <h3>Arts and Design Track</h3>
+          </article>
         </div>
       </section>
       <div class="text-center mt-4"><a class="btn btn-kcc rounded-pill px-4" href="contact.html">Inquire about a program</a></div>
